@@ -1,0 +1,390 @@
+/* ROOT */
+:root {
+  --orange-color: #EA625C;
+  --main-color: #333333;
+  --head-color: #222222;
+  --main-bg: #E5E5E5;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'),
+    url('../fonts/roboto-v29-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../fonts/roboto-v29-latin-700.woff2') format('woff2'),
+    url('../fonts/roboto-v29-latin-700.woff') format('woff');
+}
+
+/* GLOBAL STYLES */
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background: var(--main-bg);
+  font-family: "Roboto";
+}
+
+/* CONTAINER */
+.container {
+  margin: 0 auto;
+  width: 1250px;
+  padding: 0 125px;
+  box-sizing: border-box;
+}
+
+/* ROW */
+.rowjcsb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rowaic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* header, main, section, footer {
+  max-width: 1250px;
+  margin: 0 auto;
+} */
+
+/* HEADER */
+header {
+  height: auto;
+  border-bottom: 2px solid #DDDDDD;
+}
+
+.header-top {
+  padding: 30px 0;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+}
+
+.logo-img {
+  width: 35px;
+  height: 42px;
+  fill: var(--main-color);
+}
+
+.nav-wrap {
+  margin: 0;
+}
+
+.nav-link {
+  margin: 0;
+  margin-right: 30px;
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.nav-link:not(:last-child):after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #333;
+  transition: 0.2s;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.nav-link:last-child {
+  margin: 0;
+}
+
+.nav-choosen {
+  position: relative;
+  margin-left: 40px;
+  color: #666;
+  /* border-bottom: 1px solid #666; */
+}
+
+.nav-choosen::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #666;
+  transition: 0.2s;
+  transform-origin: left;
+}
+
+.nav-choosen:hover:after {
+  height: 3px;
+  background: #333;
+}
+
+.header-inner {
+  padding: 140px 0 185px;
+}
+
+.header-inner-wrap {
+  position: relative;
+}
+
+.header-inner-head {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.header-inner-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #777777;
+  width: 483px;
+  border-left: 3px solid #888;
+}
+
+/* .header-inner p::before {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background: #888;
+} */
+
+.header-inner-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 38px;
+  background: var(--orange-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  /* text-align: center; */
+}
+
+.header-inner-img {
+  position: absolute;
+  width: 390px;
+  height: 565px;
+  bottom: 0;
+  right: -125px;
+}
+
+/* MAIN */
+.main-items-wrap {
+  margin: 0;
+  padding: 0;
+  padding: 68px 0 140px;
+
+}
+
+.main-items {
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  list-style: none;
+}
+
+.main-items-head {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.main-items-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 160%;
+  color: #333333;
+}
+
+.main-points {
+  display: inline-block;
+  position: relative;
+  width: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 8px;
+  background: #DDDDDD;
+}
+
+.main-points::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #DDDDDD;
+  left: 18px;
+}
+
+.main-points::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  left: 36px;
+  background: #DDDDDD;
+}
+
+.main-learn-more-btn {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--orange-color);
+}
+
+.main-learn-more-btn::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  background-color: var(--orange-color);
+  height: 3px;
+  width: 40px;
+}
+
+/* SECTION */
+section {
+  margin-bottom: 70px;
+}
+
+.section-inner-head {
+  margin: 0;
+  margin-bottom: 30px;
+  width: 380px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.section-inner-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  width: 493px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #777777;
+  border-left: 3px solid #888888;
+}
+
+.section-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  display: inline-block;
+  padding: 12px 90px;
+  background: var(--orange-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.section-img {
+  width: 400px;
+  height: 600px;
+}
+
+/* FOOTER */
+
+.footer-wrap {
+  padding: 240px 0;
+  background: url(..//img/runners.jpg) no-repeat;
+  background-size: cover;
+  width: 1250px;
+  margin: 0 auto;
+
+}
+
+.footer-wrap .rowaic {
+  justify-content: end;
+}
+
+.footer-inner-wrap {
+  max-width: 490px;
+}
+
+.footer-inner-head {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.footer-inner-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  color: #FFFFFF;
+  border-left: 3px solid #fff;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer-inner-btn {
+  padding: 12px 46px;
+  text-decoration: none;
+  display: inline-block;
+  background: var(--orange-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (min--moz-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 2.6/2),
+/* returns 1.3, see Dev.Opera */
+only screen and (min-device-pixel-ratio: 1.3),
+only screen and (min-resolution: 124.8dpi),
+only screen and (min-resolution: 1.3dppx) {
+
+  footer {
+    background: url(..//img/runners@2x.jpg) no-repeat;
+  }
+
+}
